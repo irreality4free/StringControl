@@ -72,6 +72,3 @@ void loop() {
 
 
 
-//String com = Serial.readStringUntil(';');
-//i[0]=com;
-//Serial.println(i[0]);
