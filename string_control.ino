@@ -57,7 +57,7 @@ void Controller(String params[],const int params_num) {
     Serial.println(servo_num);
     Serial.print(F("servo_pos - "));
     Serial.println(servo_pos);
-    params[1] = "130";
+   
   }
 }
 
