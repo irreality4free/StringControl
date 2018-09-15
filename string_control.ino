@@ -25,9 +25,7 @@ void blinking() {
 void StrCommand(const int param_limit = 10) {
   if (Serial.available() > 0) {
     String com = Serial.readString();
-    unsigned int st_len = com.length();
-    //  Serial.print(F("String legth - "));
-    //  Serial.println(st_len);
+
     if (com.substring(0, 4) == "com:") {
       int param_num = com.substring(4, com.indexOf('$')).toInt();
       if (param_num > 0 && param_num < param_limit) {
@@ -35,9 +33,7 @@ void StrCommand(const int param_limit = 10) {
         String params[param_num];
         for (int i = 0; i < param_num; i++) {
           params[i] = com.substring(0, com.indexOf(';'));
-          //        Serial.print(F("Param num - "));
-          //        Serial.println(i+1);
-          //        Serial.println(params[i]);
+
           com = com.substring(com.indexOf(';') + 1, com.length());
         }
 
